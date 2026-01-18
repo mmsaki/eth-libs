@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build": "tsup index.ts --format cjs,esm --dts",
-    "publish": "bun run build && changeset publish",
+    "publish": "bun run build && npm publish --access public",
     "lint": "tsc"
   },
   "devDependencies": {

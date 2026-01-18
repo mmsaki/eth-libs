@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "build:jsonrpc": "cd packages/jsonrpc && bun run build",
-    "publish:jsonrpc": "cd packages/jsonrpc && bun run  publish"
+    "publish:jsonrpc": "cd packages/jsonrpc && bun run publish"
   },
   "dependencies": {
     "@msaki/jsonrpc": "workspace:jsonrpc"
