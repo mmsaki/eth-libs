@@ -3,7 +3,7 @@
 ## Usage
 
 ```sh
-import { JsonRpcServer } from "jsonrpc";
+import { JsonRpcServer } from "@msaki/jsonrpc";
 
 const server = new JsonRpcServer()
 

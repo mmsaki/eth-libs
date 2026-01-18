@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "jsonrpc": "workspace:jsonrpc"
+    "@msaki/jsonrpc": "workspace:jsonrpc"
   },
   "devDependencies": {
     "@types/bun": "latest"
