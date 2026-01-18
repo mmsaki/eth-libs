@@ -14,6 +14,7 @@
     "@msaki/jsonrpc": "workspace:jsonrpc"
   },
   "devDependencies": {
+    "@changesets/cli": "2.29.8",
     "@types/bun": "latest"
   },
   "peerDependencies": {

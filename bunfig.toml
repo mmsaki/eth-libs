@@ -1,0 +1,11 @@
+[workspaces]
+enabled = true
+
+[install]
+exact = true
+
+[build]
+typescript = true
+
+[package-manager]
+default = "bun"
