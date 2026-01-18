@@ -11,7 +11,7 @@
     "publish:jsonrpc": "cd packages/jsonrpc && bun run  publish"
   },
   "dependencies": {
-    "msaki/jsonrpc": "workspace:jsonrpc"
+    "@msaki/jsonrpc": "workspace:jsonrpc"
   },
   "devDependencies": {
     "@types/bun": "latest"
