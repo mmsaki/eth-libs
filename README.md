@@ -1,4 +1,4 @@
-# libs
+# libs-ts
 
 ## `@msaki/jsonrpc`
 

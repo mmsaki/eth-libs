@@ -1,5 +1,13 @@
 # jsonrpc
 
+## `@msaki/jsonrpc`
+
+A minimal jsonrpc server and client library.
+
+```sh
+bun add @msaki/jsonrpc
+```
+
 ## Usage
 
 ### RPC Server
