@@ -8,7 +8,10 @@
   ],
   "scripts": {
     "build:jsonrpc": "cd packages/jsonrpc && bun run build",
-    "publish:jsonrpc": "cd packages/jsonrpc && bun run publish"
+    "publish:jsonrpc": "cd packages/jsonrpc && bun run publish",
+    "start:mcpwallet": "cd packages/mcpwallet && bun run start",
+    "dev:mcpwallet": "cd packages/mcpwallet && bun run dev",
+    "build:mcpwallet": "cd packages/mcpwallet && bun run build"
   },
   "dependencies": {
     "@msaki/jsonrpc": "workspace:jsonrpc"
