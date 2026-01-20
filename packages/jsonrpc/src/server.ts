@@ -1,5 +1,3 @@
-import type { JsonRpcRequest, JsonRpcResponse } from "./types";
-
 export enum JsonRpcErrorCodes {
 	INVALID_REQUEST = -32600,
 	METHOD_NOT_FOUND = -32601,
@@ -59,8 +57,8 @@ export class JsonRpcServer {
 
 		const id =
 			typeof (req as any)?.id === "string" ||
-			typeof (req as any)?.id === "number" ||
-			(req as any)?.id === null
+				typeof (req as any)?.id === "number" ||
+				(req as any)?.id === null
 				? (req as any).id
 				: null;
 
@@ -69,10 +67,10 @@ export class JsonRpcServer {
 			return id === null
 				? null
 				: this.error(
-						req.id,
-						JsonRpcErrorCodes.METHOD_NOT_FOUND,
-						"Method not found",
-					);
+					req.id,
+					JsonRpcErrorCodes.METHOD_NOT_FOUND,
+					"Method not found",
+				);
 		}
 
 		try {

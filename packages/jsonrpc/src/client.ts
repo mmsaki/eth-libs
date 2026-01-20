@@ -1,5 +1,3 @@
-import type { JsonRpcRequest, JsonRpcResponse } from "./types";
-
 export class JsonRpcClient {
 	private id = 0;
 
@@ -7,7 +5,7 @@ export class JsonRpcClient {
 		private send: (
 			req: JsonRpcRequest<unknown>,
 		) => Promise<JsonRpcResponse<unknown, number>>,
-	) {}
+	) { }
 
 	async call<Method = string, Result = unknown, E = unknown>(
 		method: Method,
