@@ -1,3 +1,3 @@
-export * from "./beacon-methods";
-export * from "./engine-methods";
-export * from "./eth-methods";
+export * from "./beacon-api";
+export * from "./engine-api";
+export * from "./eth-api";
