@@ -78,18 +78,6 @@ const balance = await eth.eth_getBalance(
 console.log('Balance:', balance);
 ```
 
-### Ethereum Engine Api
-
-```ts
-import { EngineExecutionClient } from "@msaki/eth-rpc";
-
-const engineUrl = "https://localhost:8551";
-const engine = new EngineExecutionClient(engineUrl, process.env.JWT_TOKEN!);
-const payload = engine.engine_getPayloadV1("0x1");
-
-console.log(payload);
-```
-
 ### Client RPC Methods implemented
 
 - [x] eth/transaction
@@ -141,6 +129,21 @@ console.log(payload);
   - [x] eth_getUncleCountByBlockHash
   - [x] eth_getUncleCountByBlockNumber
   - [x] eth_getBlockReceipts
+
+### Ethereum Engine Api
+
+```ts
+import { EngineExecutionClient } from "@msaki/eth-rpc";
+
+const engineUrl = "https://localhost:8551";
+const engine = new EngineExecutionClient(engineUrl, process.env.JWT_TOKEN!);
+const payload = engine.engine_getPayloadV1("0x1");
+
+console.log(payload);
+```
+
+### Engine RPC Methods Implemented
+
 - [x] engine/blob
   - [x] engine_getBlobsV1
   - [x] engine_getBlobsV2
