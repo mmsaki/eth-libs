@@ -17,7 +17,8 @@
 		"rpc",
 		"ethereum",
 		"engine-api",
-		"execution-apis"
+		"execution-apis",
+		"consensus"
 	],
 	"homepage": "https://github.com/mmsaki/libs/tree/main/packages/eth-rpc",
 	"repository": {
