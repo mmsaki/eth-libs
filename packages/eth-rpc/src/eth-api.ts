@@ -248,7 +248,7 @@ export class EthExecutionClient {
 	}
 	async eth_getBlockReceipts(
 		block: BlockNumberOrTagOrHash,
-	): Promise<NotFound | ReceiptInfo> {
+	): Promise<NotFound | ReceiptInfo[]> {
 		return await this.client.call(EthMethods.eth_getBlockReceipts, [block]);
 	}
 	// debug_*
