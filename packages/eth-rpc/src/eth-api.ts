@@ -9,10 +9,10 @@ export class EthExecutionClient {
 
 	// eth/transaction
 	async eth_getTransactionByHash(
-		transactioHash: Hash32,
+		transactionHash: Hash32,
 	): Promise<NotFound | TransactionInfo> {
 		return await this.client.call(EthMethods.eth_getTransactionByHash, [
-			transactioHash,
+			transactionHash,
 		]);
 	}
 	async eth_getTransactionByBlockHashAndIndex(
@@ -261,7 +261,7 @@ export class EthExecutionClient {
 		return await this.client.call(DebugMethods.debug_getRawBlock, [block]);
 	}
 	async debug_getRawTransaction(transactionHash: Hash32): Promise<Bytes> {
-		// EIP-2718 binary-encoded trnasactions
+		// EIP-2718 binary-encoded transactions
 		return await this.client.call(DebugMethods.debug_getRawTransaction, [
 			transactionHash,
 		]);
