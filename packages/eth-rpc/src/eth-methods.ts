@@ -1,5 +1,7 @@
-import { JsonRpcClient, initializeRpcClient } from "@msaki/jsonrpc";
+import { initializeRpcClient, JsonRpcClient } from "@msaki/jsonrpc";
+
 export type * as EthSchema from "./types";
+
 import type { EthSchema } from ".";
 
 export enum Methods {
