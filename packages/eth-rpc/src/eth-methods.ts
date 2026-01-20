@@ -46,6 +46,14 @@ export enum Methods {
 	eth_accounts = "eth_accounts",
 	eth_blockNumber = "eth_blockNumber",
 	net_version = "net_version",
+	// eth/block
+	eth_getBlockByHash = "eth_getBlockByHash",
+	eth_getBlockByNumber = "eth_getBlockByNumber",
+	eth_getBlockTransactionCountByHash = "eth_getBlockTransactionCountByHash",
+	eth_getBlockTransactionCountByNumber = "eth_getBlockTransactionCountByNumber",
+	eth_getUncleCountByBlockHash = "eth_getUncleCountByBlockHash",
+	eth_getUncleCountByBlockNumber = "eth_getUncleCountByBlockNumber",
+	eth_getBlockReceipts = "eth_getBlockReceipts",
 }
 
 export class EthExecutionClient {
@@ -247,5 +255,58 @@ export class EthExecutionClient {
 	}
 	async net_version(): Promise<EthSchema.UintDecimal> {
 		return await this.client.call(Methods.net_version, []);
+	}
+	// eth/block
+	async eth_getBlockByHash(
+		blockHash: EthSchema.Hash32,
+		hydratedTransactions: boolean,
+	): Promise<EthSchema.NotFound | EthSchema.Block> {
+		return await this.client.call(Methods.eth_getBlockByHash, [
+			blockHash,
+			hydratedTransactions,
+		]);
+	}
+	async eth_getBlockByNumber(
+		block: EthSchema.BlockNumberOrTag,
+		hydratedTransactions: boolean,
+	): Promise<EthSchema.NotFound | EthSchema.Block> {
+		return await this.client.call(Methods.eth_getBlockByNumber, [
+			block,
+			hydratedTransactions,
+		]);
+	}
+	async eth_getBlockTransactionCountByHash(
+		blockHash: EthSchema.Hash32,
+	): Promise<EthSchema.NotFound | EthSchema.Uint> {
+		return await this.client.call(Methods.eth_getBlockTransactionCountByHash, [
+			blockHash,
+		]);
+	}
+	async eth_getBlockTransactionCountByNumber(
+		block: EthSchema.BlockNumberOrTag,
+	): Promise<EthSchema.NotFound | EthSchema.Uint> {
+		return await this.client.call(
+			Methods.eth_getBlockTransactionCountByNumber,
+			[block],
+		);
+	}
+	async eth_getUncleCountByBlockHash(
+		blockHash: EthSchema.Hash32,
+	): Promise<EthSchema.NotFound | EthSchema.Uint> {
+		return await this.client.call(Methods.eth_getUncleCountByBlockHash, [
+			blockHash,
+		]);
+	}
+	async eth_getUncleCountByBlockNumber(
+		block: EthSchema.BlockNumberOrTag,
+	): Promise<EthSchema.NotFound | EthSchema.Uint> {
+		return await this.client.call(Methods.eth_getUncleCountByBlockNumber, [
+			block,
+		]);
+	}
+	async eth_getBlockReceipts(
+		block: EthSchema.BlockNumberOrTagOrHash,
+	): Promise<EthSchema.NotFound | EthSchema.ReceiptInfo> {
+		return await this.client.call(Methods.eth_getBlockReceipts, [block]);
 	}
 }
