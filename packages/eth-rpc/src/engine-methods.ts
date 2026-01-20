@@ -242,4 +242,13 @@ export class EngineExecutionClient {
 			payloadId,
 		]);
 	}
+	// engine/transition-configuration
+	async engine_exchangeTransitionConfigurationV1(
+		consensusClientConfiguration: TransitionConfigurationV1,
+	): Promise<TransitionConfigurationV1> {
+		return await this.client.call(
+			EngineMethods.engine_exchangeTransitionConfigurationV1,
+			[consensusClientConfiguration],
+		);
+	}
 }

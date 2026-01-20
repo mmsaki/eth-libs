@@ -34,6 +34,8 @@ declare global {
 		engine_getPayloadBodiesByRangeV1 = "engine_getPayloadBodiesByRangeV1",
 		engine_newPayloadV5 = "engine_newPayloadV5",
 		engine_getPayloadV6 = "engine_getPayloadV6",
+		// engine/transition-configuration
+		engine_exchangeTransitionConfigurationV1 = "engine_exchangeTransitionConfigurationV1",
 	}
 }
 
