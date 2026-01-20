@@ -34,11 +34,20 @@ export class JsonRpcClient {
 	}
 }
 
-export function initializeRpcClient(url: string): JsonRpcClient {
+export function initializeRpcClient(
+	url: string,
+	jwtToken?: string,
+): JsonRpcClient {
 	const client = new JsonRpcClient(async (req: JsonRpcRequest<unknown>) => {
+		const headers: Record<string, string> = {
+			"Content-Type": "application/json",
+		};
+		if (jwtToken) {
+			headers["Authorization"] = `Bearer ${jwtToken}`;
+		}
 		const res = await fetch(url, {
 			method: "POST",
-			headers: { "Content-Type": "application/json" },
+			headers,
 			body: JSON.stringify(req),
 		});
 
