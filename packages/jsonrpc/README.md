@@ -43,7 +43,7 @@ console.log("JSON-RPC running on http://localhost:4444")
 ```ts
 import { initializeRpcClient } from "@msaki/jsonrpc";
 const url = "http://localhost:4444";
-const client = initializeRpcClient(url, process.env.JWT_TOKEN);
+const client = initializeRpcClient(url);
 const result = await client.call(
   "ping",
   []
