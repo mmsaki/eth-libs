@@ -38,6 +38,7 @@ export function initializeRpcClient(
 	url: string,
 	jwtToken?: string,
 	timeout: number = 5000,
+	otherHeaders?: Record<string, string>,
 ): JsonRpcClient {
 	const client = new JsonRpcClient(async (req: JsonRpcRequest<unknown>) => {
 		const controller = new AbortController();
@@ -45,10 +46,9 @@ export function initializeRpcClient(
 		try {
 			const headers: Record<string, string> = {
 				"Content-Type": "application/json",
+				...(jwtToken ? { Authorization: `Bearer ${jwtToken}` } : {}),
+				...(otherHeaders ?? {}),
 			};
-			if (jwtToken) {
-				headers["Authorization"] = `Bearer ${jwtToken}`;
-			}
 			const res = await fetch(url, {
 				method: "POST",
 				headers,
