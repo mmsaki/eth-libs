@@ -8,15 +8,27 @@ declare global {
 		eth_sendPrivateTransaction = "eth_sendPrivateTransaction",
 		eth_sendPrivateRawTransaction = "eth_sendPrivateRawTransaction",
 		eth_cancelPrivateTransaction = "eth_cancelPrivateTransaction",
+
 		flashbots_getFeeRefundTotalsByRecipient = "flashbots_getFeeRefundTotalsByRecipient",
 		flashbots_getFeeRefundsByRecipient = "flashbots_getFeeRefundsByRecipient",
-		flashbots_getFeeRefundsByBundle = "flashbots_getFeeRefundsByBundle",
 		flashbots_getFeeRefundsByBlock = "flashbots_getFeeRefundsByBlock",
+		flashbots_getFeeRefundsByBundle = "flashbots_getFeeRefundsByBundle",
 		flashbots_setFeeRefundRecipient = "flashbots_setFeeRefundRecipient",
 		buildernet_getDelayedRefunds = "buildernet_getDelayedRefunds",
 		buildernet_getDelayedRefundTotalsByRecipient = "buildernet_getDelayedRefundTotalsByRecipient",
 		flashbots_getMevRefundTotalByRecipient = "flashbots_getMevRefundTotalByRecipient",
 		flashbots_getMevRefundTotalBySender = "flashbots_getMevRefundTotalBySender",
+	}
+	export enum BuilderNetMethods {
+		eth_sendBundle = "eth_sendBundle",
+		eth_sendRawTransaction = "eth_sendRawTransaction",
+		buildernet_getFeeRefundTotalsByRecipient = "buildernet_getFeeRefundTotalsByRecipient",
+		buildernet_getFeeRefundsByRecipient = "buildernet_getFeeRefundsByRecipient",
+		buildernet_getFeeRefundsByBlock = "buildernet_getFeeRefundsByBlock",
+		buildernet_getFeeRefundsByBundle = "buildernet_getFeeRefundsByBundle",
+		buildernet_setFeeRefundRecipient = "buildernet_setFeeRefundRecipient",
+		buildernet_getDelayedRefunds = "buildernet_getDelayedRefunds",
+		buildernet_getDelayedRefundTotalsByRecipient = "buildernet_getDelayedRefundTotalsByRecipient",
 	}
 }
 

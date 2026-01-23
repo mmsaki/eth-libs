@@ -21,4 +21,4 @@ console.log(payload);
 import { EthFlashbotsClient } from "./src";
 
 const rpc = "https://relay.flashbots.net";
-const fc = new EthFlashbotsClient(rpc);
+const client = new EthFlashbotsClient(rpc);

@@ -4,9 +4,27 @@ export class EthFlashbotsClient extends EthExecutionClient {
 	constructor(url: string) {
 		super(url);
 	}
+
+	getFlashbotsHeader(
+		address: Address,
+		signature: Bytes32,
+	): Record<string, string> {
+		return {
+			"X-Flashbots-Signature": `${address}:${signature}`,
+		};
+	}
 	async eth_sendBundle(
 		sendBundleParams: EthSendBundleParams,
+		signature?: Bytes32,
+		sender?: Address,
 	): Promise<EthSendBundleResult> {
+		if (signature && sender) {
+			return this.client.call(
+				FlashbotsMethods.eth_sendBundle,
+				[sendBundleParams],
+				this.getFlashbotsHeader(sender, signature),
+			);
+		}
 		return await this.client.call(FlashbotsMethods.eth_sendBundle, [
 			sendBundleParams,
 		]);
