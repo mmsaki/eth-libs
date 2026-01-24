@@ -59,8 +59,6 @@ A library for ethereum execution clients apis.
 bun add @asyncswap/eth-rpc
 ```
 
-## Usage
-
 ### Execution Client Api
 
 ```ts
