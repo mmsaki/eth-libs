@@ -26,6 +26,15 @@ console.log("Balance:", balance);
 eth.eth_getTransactionCount("0x34", "safe");
 ```
 
+### Flashbots Client API
+
+```ts
+import { EthFlashbotsClient } from "@asyncswap/eth-rpc";
+
+const rpc = "https://relay.flashbots.net";
+const client = new EthFlashbotsClient(rpc);
+```
+
 ### Engine API Client
 
 ```typescript

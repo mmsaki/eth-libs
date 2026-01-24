@@ -61,7 +61,7 @@ bun add @asyncswap/eth-rpc
 
 ## Usage
 
-### Ethereum Execution Client Api
+### Execution Client Api
 
 ```ts
 import { EthExecutionClient } from '@asyncswap/eth-rpc';
@@ -76,7 +76,16 @@ const balance = await eth.eth_getBalance(
 console.log('Balance:', balance);
 ```
 
-### Ethereum Engine Api
+### Flashbots Client API
+
+```ts
+import { EthFlashbotsClient } from "@asyncswap/eth-rpc";
+
+const rpc = "https://relay.flashbots.net";
+const client = new EthFlashbotsClient(rpc);
+```
+
+### Engine Api
 
 ```ts
 import { EngineExecutionClient } from "@asyncswap/eth-rpc";
