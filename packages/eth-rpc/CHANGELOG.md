@@ -1,5 +1,13 @@
 # @asyncswap/eth-rpc
 
+## 0.4.2
+
+### Patch Changes
+
+- 9512db5: update documentation
+- Updated dependencies [9512db5]
+  - @asyncswap/jsonrpc@0.4.2
+
 ## 0.5.1
 
 ### Patch Changes

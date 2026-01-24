@@ -1,5 +1,11 @@
 # @asyncswap/jsonrpc
 
+## 0.4.2
+
+### Patch Changes
+
+- 9512db5: update documentation
+
 ## 0.5.0
 
 ### Minor Changes
