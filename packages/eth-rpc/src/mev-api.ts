@@ -19,27 +19,27 @@ export class EthFlashbotsClient extends EthExecutionClient {
 		sender?: Address,
 	): Promise<EthSendBundleResult> {
 		if (signature && sender) {
-			return this.client.call(
+			return this.rpc.call(
 				FlashbotsMethods.eth_sendBundle,
 				[sendBundleParams],
 				this.getFlashbotsHeader(sender, signature),
 			);
 		}
-		return await this.client.call(FlashbotsMethods.eth_sendBundle, [
+		return await this.rpc.call(FlashbotsMethods.eth_sendBundle, [
 			sendBundleParams,
 		]);
 	}
 	async eth_callBundle(
 		callBundleParams: EthCallBundleParams,
 	): Promise<EthCallBundleResult> {
-		return await this.client.call(FlashbotsMethods.eth_callBundle, [
+		return await this.rpc.call(FlashbotsMethods.eth_callBundle, [
 			callBundleParams,
 		]);
 	}
 	async mev_sendBundle(
 		sendBundleParams: MevSendBundleParams,
 	): Promise<MevSendBundleResult> {
-		return await this.client.call(FlashbotsMethods.mev_sendBundle, [
+		return await this.rpc.call(FlashbotsMethods.mev_sendBundle, [
 			sendBundleParams,
 		]);
 	}
@@ -47,7 +47,7 @@ export class EthFlashbotsClient extends EthExecutionClient {
 		simBundleParams: MevSimBundleParams,
 		parentBlock?: { parentBlock: Hash32 },
 	): Promise<MevSimBundleResult> {
-		return await this.client.call(FlashbotsMethods.mev_simBundle, [
+		return await this.rpc.call(FlashbotsMethods.mev_simBundle, [
 			simBundleParams,
 			parentBlock,
 		]);
@@ -55,37 +55,35 @@ export class EthFlashbotsClient extends EthExecutionClient {
 	async eth_cancelBundle(
 		cancelParams: EthCancelBundleParams,
 	): Promise<EthCancelBundleResult> {
-		return await this.client.call(FlashbotsMethods.eth_cancelBundle, [
+		return await this.rpc.call(FlashbotsMethods.eth_cancelBundle, [
 			cancelParams,
 		]);
 	}
 	async eth_sendPrivateTransaction(
 		sendPrivateTransactionParams: EthSendPrivateTransactionParams,
 	): Promise<EthSendPrivateTransactionResult> {
-		return await this.client.call(FlashbotsMethods.eth_sendPrivateTransaction, [
+		return await this.rpc.call(FlashbotsMethods.eth_sendPrivateTransaction, [
 			sendPrivateTransactionParams,
 		]);
 	}
 	async eth_sendPrivateRawTransaction(
 		sendPrivateRawTransactionParams: EthSendPrivateRawTransactionParams,
 	): Promise<EthSendPrivateRawTransactionResult> {
-		return await this.client.call(
-			FlashbotsMethods.eth_sendPrivateRawTransaction,
-			[sendPrivateRawTransactionParams],
-		);
+		return await this.rpc.call(FlashbotsMethods.eth_sendPrivateRawTransaction, [
+			sendPrivateRawTransactionParams,
+		]);
 	}
 	async eth_cancelPrivateTransaction(
 		cancelPrivateTransactionParams: EthCancelPrivateTransactioParams,
 	): Promise<EthCancelPrivateTransactionResult> {
-		return await this.client.call(
-			FlashbotsMethods.eth_cancelPrivateTransaction,
-			[cancelPrivateTransactionParams],
-		);
+		return await this.rpc.call(FlashbotsMethods.eth_cancelPrivateTransaction, [
+			cancelPrivateTransactionParams,
+		]);
 	}
 	async flashbots_getFeeRefundTotalsByRecipient(
 		params: GetFeeRefundTotalsByRecipientParams,
 	): Promise<GetFeeRefundTotalsByRecipientResult> {
-		return await this.client.call(
+		return await this.rpc.call(
 			FlashbotsMethods.flashbots_getFeeRefundTotalsByRecipient,
 			[params],
 		);
@@ -93,7 +91,7 @@ export class EthFlashbotsClient extends EthExecutionClient {
 	async flashbots_getFeeRefundsByRecipient(
 		params: GetFeeRefundsByRecipientParams,
 	): Promise<GetFeeRefundsByRecipientResult> {
-		return await this.client.call(
+		return await this.rpc.call(
 			FlashbotsMethods.flashbots_getFeeRefundsByRecipient,
 			[params],
 		);
@@ -101,7 +99,7 @@ export class EthFlashbotsClient extends EthExecutionClient {
 	async flashbots_getFeeRefundsByBundle(
 		params: GetFeeRefundsByBundleParams,
 	): Promise<GetFeeRefundsByBundleResult> {
-		return await this.client.call(
+		return await this.rpc.call(
 			FlashbotsMethods.flashbots_getFeeRefundsByBundle,
 			[params],
 		);
@@ -109,7 +107,7 @@ export class EthFlashbotsClient extends EthExecutionClient {
 	async flashbots_getFeeRefundsByBlock(
 		params: GetFeeRefundsByBlockParams,
 	): Promise<GetFeeRefundsByBlockResult> {
-		return await this.client.call(
+		return await this.rpc.call(
 			FlashbotsMethods.flashbots_getFeeRefundsByBlock,
 			[params],
 		);
@@ -118,7 +116,7 @@ export class EthFlashbotsClient extends EthExecutionClient {
 		user: Address,
 		delegate: Address,
 	): Promise<{ from: Address; to: Address }> {
-		return await this.client.call(
+		return await this.rpc.call(
 			FlashbotsMethods.flashbots_setFeeRefundRecipient,
 			[user, delegate],
 		);
@@ -126,15 +124,14 @@ export class EthFlashbotsClient extends EthExecutionClient {
 	async buildernet_getDelayedRefunds(
 		params: GetDelayedRefundsParams,
 	): Promise<GetDelayedRefundsResult> {
-		return await this.client.call(
-			FlashbotsMethods.buildernet_getDelayedRefunds,
-			[params],
-		);
+		return await this.rpc.call(FlashbotsMethods.buildernet_getDelayedRefunds, [
+			params,
+		]);
 	}
 	async buildernet_getDelayedRefundTotalsByRecipient(
 		params: GetDelayedRefundTotalsByRecipientParams,
 	): Promise<GetDelayedRefundTotalsByRecipientResult> {
-		return await this.client.call(
+		return await this.rpc.call(
 			FlashbotsMethods.buildernet_getDelayedRefundTotalsByRecipient,
 			[params],
 		);
@@ -142,7 +139,7 @@ export class EthFlashbotsClient extends EthExecutionClient {
 	async flashbots_getMevRefundTotalByRecipient(
 		user: Address,
 	): Promise<{ total: Hex }> {
-		return await this.client.call(
+		return await this.rpc.call(
 			FlashbotsMethods.flashbots_getMevRefundTotalByRecipient,
 			[user],
 		);
@@ -150,7 +147,7 @@ export class EthFlashbotsClient extends EthExecutionClient {
 	async flashbots_getMevRefundTotalBySender(
 		sender: Address,
 	): Promise<{ total: Hex }> {
-		return await this.client.call(
+		return await this.rpc.call(
 			FlashbotsMethods.flashbots_getMevRefundTotalBySender,
 			[sender],
 		);
