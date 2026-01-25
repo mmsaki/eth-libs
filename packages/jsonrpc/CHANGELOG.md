@@ -1,5 +1,11 @@
 # @asyncswap/jsonrpc
 
+## 0.4.5
+
+### Patch Changes
+
+- 0d61f89: simplify method type and export error codes
+
 ## 0.4.4
 
 ### Patch Changes
