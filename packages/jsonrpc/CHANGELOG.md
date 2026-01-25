@@ -1,5 +1,11 @@
 # @asyncswap/jsonrpc
 
+## 0.4.6
+
+### Patch Changes
+
+- 07c284d: update handle type
+
 ## 0.4.5
 
 ### Patch Changes
