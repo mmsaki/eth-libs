@@ -4,8 +4,8 @@ export class JsonRpcClient {
 
 	constructor(private url: string) { }
 
-	async call<Method = string, Result = unknown, E = unknown>(
-		request: JsonRpcRequest<Method> | JsonRpcRequest<Method>[],
+	async call<Result = unknown, E = unknown>(
+		request: JsonRpcRequest | JsonRpcRequest[],
 		headers?: Record<string, string>,
 	): Promise<Result | Result[] | E> {
 		const response = await this.request(request, headers);
@@ -23,10 +23,7 @@ export class JsonRpcClient {
 		}
 	}
 
-	buildRequest<Method>(
-		method: Method,
-		params: unknown[] = [],
-	): JsonRpcRequest<Method> {
+	buildRequest(method: string, params: unknown[] = []): JsonRpcRequest {
 		return {
 			jsonrpc: "2.0" as const,
 			method,
@@ -36,7 +33,7 @@ export class JsonRpcClient {
 	}
 
 	private async request(
-		req: JsonRpcRequest<unknown> | JsonRpcRequest<unknown>[],
+		req: JsonRpcRequest | JsonRpcRequest[],
 		customHeaders?: Record<string, string>,
 	): Promise<
 		JsonRpcResponse<unknown, number> | JsonRpcResponse<unknown, number>[]
@@ -69,8 +66,8 @@ export class JsonRpcClient {
 		}
 	}
 
-	async notify<Method = string>(method: Method, params?: unknown[]) {
-		const request: JsonRpcRequest<Method> = {
+	async notify(method: string, params?: unknown[]) {
+		const request: JsonRpcRequest = {
 			jsonrpc: "2.0",
 			method,
 			params,

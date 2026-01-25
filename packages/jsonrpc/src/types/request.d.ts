@@ -1,7 +1,7 @@
 declare global {
-	export interface JsonRpcRequest<Method> {
+	export interface JsonRpcRequest {
 		jsonrpc: "2.0";
-		method: Method;
+		method: string;
 		params?: unknown[];
 		id?: JsonRpcId;
 	}

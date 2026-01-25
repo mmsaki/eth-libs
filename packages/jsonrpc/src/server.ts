@@ -8,7 +8,7 @@ export class JsonRpcServer {
 		this.methods.set(method, handler);
 	}
 
-	async handle<Result, Method = string>(
+	async handle<Result>(
 		raw: unknown,
 	): Promise<
 		| JsonRpcResponse<Result, JsonRpcErrorCode | number>
@@ -33,7 +33,7 @@ export class JsonRpcServer {
 		}
 
 		// handle single response
-		const req = raw as Partial<JsonRpcRequest<Method>>;
+		const req = raw as Partial<JsonRpcRequest>;
 
 		if (
 			typeof req !== "object" ||
@@ -84,8 +84,8 @@ export class JsonRpcServer {
 		}
 	}
 
-	private error<Result, Method = string>(
-		id: JsonRpcRequest<Method>["id"],
+	private error<Result>(
+		id: JsonRpcRequest["id"],
 		code: JsonRpcErrorCode | number,
 		message: string,
 		data?: unknown,

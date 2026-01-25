@@ -66,6 +66,7 @@ enum JsonRpcErrorCodes {
   INTERNAL_ERROR = -32603,
   PARSE_ERROR = -32700,
   REQUEST_ABORTED = -32800,
+  REQUEST_FAILED = -32801,
 }
 ```
 
@@ -77,8 +78,8 @@ enum JsonRpcErrorCodes {
 
 #### Methods
 
-- `call<Method, Result, Error>(method, params?, headers?)` - Make a JSON-RPC call
-- `notify<Method>(method, params?)` - Send a JSON-RPC notification
+- `call<Result, Error>(request, headers?)` - Make a JSON-RPC call
+- `notify(method, params?)` - Send a JSON-RPC notification
 - `buildRequest(method, params?)` - Build a JSON-RPC request object
 
 ## Examples
