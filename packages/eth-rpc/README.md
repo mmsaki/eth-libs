@@ -26,21 +26,9 @@ console.log("Balance:", balance);
 eth.eth_getTransactionCount("0x34", "safe");
 ```
 
-### Engine API Client
+## References
 
-```typescript
-import { EngineExecutionClient } from '@asyncswap/eth-rpc';
-
-const engineUrl = 'http://localhost:8551';
-const engine = new EngineExecutionClient(engineUrl, process.env.JWT_TOKEN!);
-const payload = await engine.engine_getPayloadV1("0x1");
-
-console.log(payload);
-```
-
-## Type Safety
-
-Full TypeScript support with comprehensive type definitions for all RPC methods and responses.
+- [ethereum/execution-apis](https://github.com/ethereum/execution-apis)
 
 ## Dependencies
 
