@@ -11,7 +11,7 @@ eth.eth_getTransactionCount("0x34", "safe");
 
 import { EngineExecutionClient } from "./src";
 
-const engineUrl = "https://localhost:8551";
+const engineUrl = "http://localhost:8551";
 const engine = new EngineExecutionClient(engineUrl, process.env.JWT_TOKEN!);
 const payload = await engine
 	.setHeaders({

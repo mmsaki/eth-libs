@@ -31,24 +31,15 @@ eth.eth_getTransactionCount("0x34", "safe");
 ```typescript
 import { EngineExecutionClient } from '@asyncswap/eth-rpc';
 
-const engineUrl = 'https://localhost:8551';
+const engineUrl = 'http://localhost:8551';
 const engine = new EngineExecutionClient(engineUrl, process.env.JWT_TOKEN!);
-const payload = await engine.engine_getPayloadV1("0x1");
+const payload = await engine
+ .setHeaders({
+  Authorization: `Bearer <jwt-token>`,
+ })
+  .engine_getPayloadV1("0x1");
 
 console.log(payload);
-```
-
-## Error Handling
-
-All methods return typed responses. Handle errors appropriately:
-
-```typescript
-try {
-  const balance = await client.eth_getBalance(address, 'latest');
-  console.log('Balance:', balance);
-} catch (error) {
-  console.error('RPC Error:', error);
-}
 ```
 
 ## Type Safety

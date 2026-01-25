@@ -77,10 +77,13 @@ console.log('Balance:', balance);
 ```ts
 import { EngineExecutionClient } from "@asyncswap/eth-rpc";
 
-const engineUrl = "https://localhost:8551";
+const engineUrl = "http://localhost:8551";
 const engine = new EngineExecutionClient(engineUrl, process.env.JWT_TOKEN!);
-const payload = engine.engine_getPayloadV1("0x1");
-
+const payload = await engine
+ .setHeaders({
+  Authorization: `Bearer <jwt-token>`,
+ })
+ .eth_chainId();
 console.log(payload);
 ```
 
