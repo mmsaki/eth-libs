@@ -1,5 +1,11 @@
 # @asyncswap/eth-rpc
 
+## 0.4.6
+
+### Patch Changes
+
+- 3d6ec6e: add clinet version spec
+
 ## 0.4.5
 
 ### Patch Changes
