@@ -72,10 +72,12 @@ const balance = await eth.eth_getBalance(
 console.log('Balance:', balance);
 ```
 
+## [`@asyncswap/engine-rpc`](./packages/engine-rpc)
+
 ### Engine Api
 
 ```ts
-import { EngineExecutionClient } from "@asyncswap/eth-rpc";
+import { EngineExecutionClient } from "@asyncswap/engine-rpc";
 
 const engineUrl = "http://localhost:8551";
 const engine = new EngineExecutionClient(engineUrl, process.env.JWT_TOKEN!);
