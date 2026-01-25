@@ -1,5 +1,13 @@
 # @asyncswap/eth-rpc
 
+## 0.4.3
+
+### Patch Changes
+
+- 7ae86a0: new refactor on methods as data
+- Updated dependencies [40a79dc]
+  - @asyncswap/jsonrpc@0.4.3
+
 ## 0.4.2
 
 ### Patch Changes

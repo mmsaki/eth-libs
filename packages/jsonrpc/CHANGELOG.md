@@ -1,5 +1,11 @@
 # @asyncswap/jsonrpc
 
+## 0.4.3
+
+### Patch Changes
+
+- 40a79dc: add support for batcing and streamlined error methods
+
 ## 0.4.2
 
 ### Patch Changes
