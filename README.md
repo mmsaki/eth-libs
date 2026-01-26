@@ -1,12 +1,12 @@
 # Ethereum Client Libs
 
-A collections of typescript libraries for Ethereum client JSON-RPC api specs.
+Typescript libraries for Ethereum client JSON-RPC api specs.
 
-1. [`@asyncswap/jsonrpc`](./packages/jsonrpc)
-1. [`@asyncswap/eth-rpc`](./packages/eth-rpc)
-1. [`@asyncswap/engine-rpc`](./packages/engine-rpc)
-1. [`@asyncswap/flashbots-rpc`](./packages/flashbots-rpc)
-1. [`@asyncswap/buildernet-rpc`](./packages/buildernet-rpc)
+- [`@asyncswap/jsonrpc`](./packages/jsonrpc)
+- [`@asyncswap/eth-rpc`](./packages/eth-rpc)
+- [`@asyncswap/engine-rpc`](./packages/engine-rpc)
+- [`@asyncswap/flashbots-rpc`](./packages/flashbots-rpc)
+- [`@asyncswap/buildernet-rpc`](./packages/buildernet-rpc)
 
 ## Installation
 
