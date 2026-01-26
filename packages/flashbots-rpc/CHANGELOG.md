@@ -1,5 +1,13 @@
 # @asyncswap/flashbots-rpc
 
+## 0.0.6
+
+### Patch Changes
+
+- 81bbbc4: fixing dist packages
+- Updated dependencies [81bbbc4]
+  - @asyncswap/jsonrpc@0.4.12
+
 ## 0.0.5
 
 ### Patch Changes

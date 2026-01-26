@@ -1,5 +1,11 @@
 # @asyncswap/jsonrpc
 
+## 0.4.12
+
+### Patch Changes
+
+- 81bbbc4: fixing dist packages
+
 ## 0.4.11
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @asyncswap/eth-rpc
 
+## 0.4.13
+
+### Patch Changes
+
+- 81bbbc4: fixing dist packages
+- Updated dependencies [81bbbc4]
+  - @asyncswap/jsonrpc@0.4.12
+
 ## 0.4.12
 
 ### Patch Changes

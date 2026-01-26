@@ -4,6 +4,14 @@
 
 ### Patch Changes
 
+- 81bbbc4: fixing dist packages
+- Updated dependencies [81bbbc4]
+  - @asyncswap/jsonrpc@0.4.12
+
+## 0.0.7
+
+### Patch Changes
+
 - 25f19df: fixing package dist
 
 ## 0.0.6
