@@ -1,0 +1,46 @@
+{
+	"name": "@asyncswaprpc",
+	"description": "A library for flashbots buildernet JSON-RPC api.",
+	"author": "Meek Msaki",
+	"version": "0.0.0",
+	"license": "MIT",
+	"type": "module",
+	"main": "dist/index.js",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.ts",
+	"keywords": [
+		"flashbots",
+		"buildernet",
+		"ethereum",
+		"mev",
+		"json-rpc"
+	],
+	"homepage": "https://github.com/asyncswap/eth-libs/tree/main/packages/buildernet-rpc",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/asyncswap/eth-libs.git",
+		"directory": "packages/buildernet-rpc"
+	},
+	"bugs": {
+		"url": "https://github.com/asyncswap/eth-libs/issues"
+	},
+	"publishConfig": {
+		"access": "public",
+		"directory": "dist"
+	},
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"publish": "bun run build && bun publish --access public",
+		"format": "bun biome format --write"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.3.11",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"@asyncswap/eth-rpc": "^0.4.7"
+	}
+}
