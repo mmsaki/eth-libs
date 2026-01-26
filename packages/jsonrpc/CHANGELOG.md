@@ -1,5 +1,11 @@
 # @asyncswap/jsonrpc
 
+## 0.4.10
+
+### Patch Changes
+
+- 69a2d7e: patch types updates
+
 ## 0.4.9
 
 ### Patch Changes

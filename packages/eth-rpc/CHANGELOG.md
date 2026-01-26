@@ -1,5 +1,13 @@
 # @asyncswap/eth-rpc
 
+## 0.4.11
+
+### Patch Changes
+
+- 69a2d7e: patch types updates
+- Updated dependencies [69a2d7e]
+  - @asyncswap/jsonrpc@0.4.10
+
 ## 0.4.10
 
 ### Patch Changes
