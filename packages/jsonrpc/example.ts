@@ -2,8 +2,8 @@ import { JsonRpcServer } from "./src";
 
 const server = new JsonRpcServer();
 
-server.register("add", async ([a, b]: [number, number]) => a + b);
-server.register("ping", async () => "pong");
+server.register("eth_add", async ([a, b]: [number, number]) => a + b);
+server.register("eth_ping", async () => "pong");
 
 Bun.serve({
 	port: 4444,
@@ -26,5 +26,5 @@ import { JsonRpcClient } from "./src";
 
 const url = "http://localhost:4444";
 const client = new JsonRpcClient(url);
-const result = await client.call(client.buildRequest("ping", []));
+const result = await client.call(client.buildRequest("eth_ping", []));
 console.log(result);

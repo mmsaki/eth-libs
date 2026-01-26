@@ -15,8 +15,8 @@ import { JsonRpcServer } from "@asyncswap/jsonrpc";
 
 const server = new JsonRpcServer()
 
-server.register("add", ([a,b]: [number, number]) => a + b)
-server.register("ping", () => "pong")
+server.register("eth_add", async ([a,b]: [number, number]) => a + b)
+server.register("eth_ping", async () => "pong")
 
 Bun.serve({
   port: 4444,
@@ -43,7 +43,7 @@ import { initializeRpcClient } from "@asyncswap/jsonrpc";
 const url = "http://localhost:4444";
 const client = initializeRpcClient(url, process.env.JWT_TOKEN);
 const result = await client.call(
-  "ping",
+  "eth_ping",
   []
 );
 console.log(result)
