@@ -1,5 +1,11 @@
 # @asyncswap/jsonrpc
 
+## 0.4.9
+
+### Patch Changes
+
+- dc792b1: (refactor): change to `withHeaders` option and update BaseClient source
+
 ## 0.4.8
 
 ### Patch Changes

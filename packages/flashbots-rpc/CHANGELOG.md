@@ -1,5 +1,13 @@
 # @asyncswap/flashbots-rpc
 
+## 0.0.3
+
+### Patch Changes
+
+- dc792b1: (refactor): change to `withHeaders` option and update BaseClient source
+- Updated dependencies [dc792b1]
+  - @asyncswap/jsonrpc@0.4.9
+
 ## 0.0.2
 
 ### Patch Changes

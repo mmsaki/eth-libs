@@ -1,5 +1,13 @@
 # @asyncswap/engine-rpc
 
+## 0.0.5
+
+### Patch Changes
+
+- dc792b1: (refactor): change to `withHeaders` option and update BaseClient source
+- Updated dependencies [dc792b1]
+  - @asyncswap/jsonrpc@0.4.9
+
 ## 0.0.4
 
 ### Patch Changes
