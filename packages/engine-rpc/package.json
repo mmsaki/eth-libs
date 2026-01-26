@@ -2,7 +2,7 @@
 	"name": "@asyncswap/engine-rpc",
 	"description": "A library for Ethereum engine api JSON-RPC spec.",
 	"author": "Meek Msaki",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"license": "MIT",
 	"type": "module",
 	"main": "dist/index.js",
@@ -33,13 +33,12 @@
 		"format": "bun biome format --write"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.3.11",
 		"@types/bun": "latest"
 	},
 	"peerDependencies": {
 		"typescript": "^5"
 	},
 	"dependencies": {
-		"@asyncswap/eth-rpc": "^0.4.8"
+		"@asyncswap/eth-rpc": "^0.4.9"
 	}
 }

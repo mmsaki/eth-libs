@@ -2,7 +2,7 @@
 	"name": "@asyncswap/jsonrpc",
 	"description": "A minimal jsonrpc spec implementation.",
 	"author": "Meek Msaki",
-	"version": "0.4.7",
+	"version": "0.4.8",
 	"license": "MIT",
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
@@ -32,7 +32,6 @@
 		"format": "bun biome format --write"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.3.11",
 		"@types/bun": "latest"
 	},
 	"peerDependencies": {

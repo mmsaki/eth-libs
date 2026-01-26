@@ -1,5 +1,13 @@
 # @asyncswap/engine-rpc
 
+## 0.0.4
+
+### Patch Changes
+
+- e9fc1df: remove biome dep
+- Updated dependencies [e9fc1df]
+  - @asyncswap/eth-rpc@0.4.9
+
 ## 0.0.3
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @asyncswap/eth-rpc
 
+## 0.4.9
+
+### Patch Changes
+
+- e9fc1df: remove biome dep
+- Updated dependencies [e9fc1df]
+  - @asyncswap/jsonrpc@0.4.8
+
 ## 0.4.8
 
 ### Patch Changes

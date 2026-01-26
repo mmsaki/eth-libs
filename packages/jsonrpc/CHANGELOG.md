@@ -1,5 +1,11 @@
 # @asyncswap/jsonrpc
 
+## 0.4.8
+
+### Patch Changes
+
+- e9fc1df: remove biome dep
+
 ## 0.4.7
 
 ### Patch Changes
