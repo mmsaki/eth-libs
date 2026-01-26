@@ -1,4 +1,4 @@
-import { BaseClient } from "@asyncswap/eth-rpc";
+import { BaseClient } from "@asyncswap/jsonrpc";
 
 export class EngineExecutionClient extends BaseClient<EngineMethodsSpec> {
   constructor(url: string, jwt_token: string) {
