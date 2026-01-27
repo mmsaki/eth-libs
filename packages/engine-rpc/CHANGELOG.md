@@ -1,5 +1,11 @@
 # @asyncswap/engine-rpc
 
+## 0.0.10
+
+### Patch Changes
+
+- 76df69a: fixes unresolved types
+
 ## 0.0.9
 
 ### Patch Changes

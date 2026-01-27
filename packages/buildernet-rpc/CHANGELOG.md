@@ -1,5 +1,11 @@
 # @asyncswap/buildernet-rpc
 
+## 0.0.9
+
+### Patch Changes
+
+- 76df69a: fixes unresolved types
+
 ## 0.0.8
 
 ### Patch Changes

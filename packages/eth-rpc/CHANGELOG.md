@@ -1,5 +1,11 @@
 # @asyncswap/eth-rpc
 
+## 0.4.15
+
+### Patch Changes
+
+- 76df69a: fixes unresolved types
+
 ## 0.4.14
 
 ### Patch Changes
