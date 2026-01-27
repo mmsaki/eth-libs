@@ -1,17 +1,10 @@
-import { BaseClient } from "@asyncswap/jsonrpc";
+import { BaseClient, type RpcSpec } from "@asyncswap/jsonrpc";
+import type { BuildernetMethodsSpec } from "./types";
 
 export class BuildernetClient extends BaseClient<BuildernetMethodsSpec> {
-  constructor(url: string) {
-    super(url);
-  }
+	constructor(url: string) {
+		super(url);
+	}
 }
 
-export type FlashbotsRpcMethods<
-  MethodsSpec extends Record<string, { params: unknown[]; result: unknown }>,
-> = {
-    [Method in keyof MethodsSpec]: (
-      ...params: MethodsSpec[Method]["params"]
-    ) => Promise<MethodsSpec[Method]["result"]>;
-  };
-export interface BuildernetClient
-  extends FlashbotsRpcMethods<BuildernetMethodsSpec> { }
+export type BuildernetRpc = BuildernetClient & RpcSpec<BuildernetMethodsSpec>;

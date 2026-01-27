@@ -14,9 +14,10 @@ bun add @asyncswap/buildernet-rpc
 
 ```ts
 import { BuildernetClient } from "@asyncswap/buildernet-rpc";
+import type { BuildernetRpc, Hex } from "@asyncswap/buildernet-rpc";
 
 const rpc = "https://rpc.buildernet.org";
-const client = new BuildernetClient(rpc);
+const client = new BuildernetClient(rpc) as BuildernetRpc;
 const bundle = {
  txs: ["0x123abc", "0x456def..."] as Hex[],
  blockNumber: "0xb63dcd" as Hex,
