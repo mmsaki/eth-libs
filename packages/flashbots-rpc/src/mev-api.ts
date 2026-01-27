@@ -1,4 +1,5 @@
-import { BaseClient } from "@asyncswap/jsonrpc";
+import { BaseClient, type RpcSpec } from "@asyncswap/jsonrpc";
+import type { FlashbotsMethodsSpec } from "./types";
 
 export class FlashbotsClient extends BaseClient<FlashbotsMethodsSpec> {
   constructor(url: string) {
@@ -6,12 +7,4 @@ export class FlashbotsClient extends BaseClient<FlashbotsMethodsSpec> {
   }
 }
 
-export type FlashbotsRpcMethods<
-  MethodsSpec extends Record<string, { params: unknown[]; result: unknown }>,
-> = {
-    [Method in keyof MethodsSpec]: (
-      ...params: MethodsSpec[Method]["params"]
-    ) => Promise<MethodsSpec[Method]["result"]>;
-  };
-export interface FlashbotsClient
-  extends FlashbotsRpcMethods<FlashbotsMethodsSpec> { }
+export type FlashbotsRpc = FlashbotsClient & RpcSpec<FlashbotsMethodsSpec>;

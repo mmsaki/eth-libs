@@ -1,7 +1,8 @@
+import type { FlashbotsRpc, Hex } from "./src";
 import { FlashbotsClient } from "./src";
 
 const rpc = "https://relay.flashbots.net";
-const client = new FlashbotsClient(rpc);
+const client = new FlashbotsClient(rpc) as FlashbotsRpc;
 const bundle = {
   txs: ["0x123abc", "0x456def..."] as Hex[],
 
