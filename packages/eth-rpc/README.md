@@ -13,14 +13,14 @@ bun add @asyncswap/eth-rpc
 ### Execution API Client
 
 ```typescript
-import { ExecutionClient } from '@asyncswap/eth-rpc';
+import { ExecutionClient } from "@asyncswap/eth-rpc";
+import type { ExecutionClientRpc } from "@asyncswap/eth-rpc";
 
-const url = 'http://localhost:8545'
-const eth = new ExecutionClient(url);
-
+const url = "http://localhost:8545";
+const eth = new ExecutionClient(url) as ExecutionClientRpc;
 const balance = await eth.eth_getBalance(
-  "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
-  "latest"
+ "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+ "latest",
 );
 console.log("Balance:", balance);
 eth.eth_getTransactionCount("0x34", "safe");
