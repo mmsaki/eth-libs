@@ -63,9 +63,6 @@
     "packages/eth-types": {
       "name": "@asyncswap/eth-types",
       "version": "0.0.1",
-      "dependencies": {
-        "@asyncswap/jsonrpc": "^0.4.13",
-      },
       "devDependencies": {
         "@types/bun": "latest",
       },

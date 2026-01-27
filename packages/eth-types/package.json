@@ -42,7 +42,5 @@
 	"peerDependencies": {
 		"typescript": "^5"
 	},
-	"dependencies": {
-		"@asyncswap/jsonrpc": "^0.4.13"
-	}
+	"dependencies": {}
 }
