@@ -1,5 +1,11 @@
 # @asyncswap/jsonrpc
 
+## 0.4.15
+
+### Patch Changes
+
+- e924ba9: add new method `getRequestBody`
+
 ## 0.4.14
 
 ### Patch Changes
