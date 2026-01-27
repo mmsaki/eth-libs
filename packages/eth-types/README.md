@@ -5,7 +5,7 @@ A library for Etherum Clients JSON-RPC types.
 ## Installation
 
 ```sh
-bun add @asyncswap/eth-types
+bun add -D @asyncswap/eth-types
 ```
 
 ## Quick Start
