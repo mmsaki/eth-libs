@@ -6,7 +6,7 @@ import type {
 	Bytes256,
 	Hash32,
 	Uint64,
-} from "@asyncswap/types";
+} from "@asyncswap/eth-types";
 export enum PAYLOAD_STATUS {
 	VALID = "VALID",
 	INVALID = "INVALID",

@@ -1,4 +1,4 @@
-import type { Hash32, Uint64, Uint256 } from "@asyncswap/types";
+import type { Hash32, Uint64, Uint256 } from "@asyncswap/eth-types";
 // engine types
 export interface TransitionConfigurationV1 {
 	terminalTotalDifficulty: Uint256;

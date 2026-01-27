@@ -1,4 +1,4 @@
-import type { Bytes, Bytes48 } from "@asyncswap/types";
+import type { Bytes, Bytes48 } from "@asyncswap/eth-types";
 export interface BlobAndProofV1 {
 	blob: Bytes;
 	proof: Bytes48;

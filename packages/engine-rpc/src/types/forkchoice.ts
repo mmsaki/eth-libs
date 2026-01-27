@@ -4,7 +4,7 @@ import type {
 	Bytes32,
 	Hash32,
 	Uint64,
-} from "@asyncswap/types";
+} from "@asyncswap/eth-types";
 import type { RestrictedPayloadStatusV1, WithdrawalV1 } from "./payload";
 // forkchoice
 export interface ForkchoiceStateV1 {
